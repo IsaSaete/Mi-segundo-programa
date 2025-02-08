@@ -4,10 +4,9 @@ const user1Name = userName.length >= 5;
 const password = "ProgrÁmÀ2";
 const passwordLength = password.length >= 8;
 const passwordNumber = /\d/.test(password);
-//const passwordMayus = /[A-ZÀ-ÿ]/.test(password);
-const passwordMayus = /[A-ZÁÉÍÓÚÑáéíóúñÀÈÌÒÙàèìòù]/.test(password);
-
-const passwordValidation = passwordLength && passwordNumber && passwordMayus;
+const passwordUpperCase = /[A-ZÁÉÍÓÚÑáéíóúñÀÈÌÒÙàèìòù]/.test(password);
+const passwordValidation =
+  passwordLength && passwordNumber && passwordUpperCase;
 
 const password2 = "ProgrÁmÀ2";
 const passwordsEqual = password === password2;
