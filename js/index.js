@@ -1,13 +1,14 @@
 const userName = "isasaete";
 const user1Name = userName.length >= 5;
 
-const password = "Programa2";
+const password = "isasÀeñ$&/z11";
 const passwordLength = password.length >= 8;
 const passwordNumber = /\d/.test(password);
-const passwordMayus = /[A-Z]/.test(password);
+const passwordMayus = /[A-Z\u00C0-\u017F]/.test(password);
+
 const passwordValidation = passwordLength && passwordNumber && passwordMayus;
 
-const password2 = "Programa2";
+const password2 = "isasÀeñz11";
 const passwordsEqual = password === password2;
 
 const age = 34;
